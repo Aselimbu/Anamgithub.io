@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="Img/ss.png" alt="" type="image/png" />
+  
+    
+    <script src="assets/js/script.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .paragraph {
+        font-size: 18px;
+        margin-bottom: 30px;
+        padding: 0 5%;
+        text-align: center;
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 10px;
+        width: 45%;
+        border: 1px solid #fff;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 10px;
+      }
+
+      .portfolio-button {
+        display: block;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 17px 20px;
+        font-size: 1.1em;
+        text-decoration: none;
+        margin-top: 20px;
+        position: relative;
+        border-radius: 0.25rem;
+        background-color: var(--bg-dark);
+        cursor: pointer;
+        z-index: 1;
+        transition: 0.5s;
+        border: 2px solid #fff;
+        border-radius: 5px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .card {
+          width: 100%;
+          margin: 4% 0;
+          padding: 20px 0;
+        }
+        .card-container {
+          flex-direction: column;
+        }
+        .portfolio-button {
+          width: 90%;
+          margin: 4% auto 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading page_head">Thank You!</h1>
+      <p class="paragraph">
+        I appreciate your support. I'll contact you back shortly, but in the
+        meantime, take a look at my amazing work.
+      </p>
+      <div class="card-container">
+        <div class="card">
+          <h2>Connect with Me</h2>
+          <div class="social social-icons">
+            <a
+              id="insta"
+              target="_blank"
+              class="fa fa-instagram"
+              onclick="urlclicked()"
+            ></a>
+            <a
+              id="github"
+              target="_blank"
+              class="fa fa-github"
+              onclick="urlclicked()"
+            ></a>
+            <a
+              id="linkedin"
+              target="_blank"
+              class="fa fa-linkedin"
+              onclick="urlclicked()"
+            ></a>
+            <a
+              id="whatsapp"
+              target="_blank"
+              class="fa fa-whatsapp"
+              onclick="urlclicked()"
+            ></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Visit My Portfolio</h2>
+          <a href="index.html" class="portfolio-button btn-effect">
+            <div class="top-face">Visit Portfolio</div>
+            <div class="front-face">Visit Portfolio</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  
+  document
+    .getElementById("visitNowButton")
+    .addEventListener("click", function (event) {
+      
+      event.preventDefault();
+     
+      window.location.href = this.getAttribute("href");
+    });
+</script>
